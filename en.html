@@ -33,6 +33,10 @@
                 </a>
             </li>
         </ul>
+        <div class="languages">
+            <a class="active-language language-en" href="en.html">EN</a>/<a href="pt.html">PT</a>
+        </div>
+
         <a class="links" href="https://www.linkedin.com/in/diogo-schultz/" target="_blank" rel="noopener noreferrer">
             <i class="linkedin fa-brands fa-linkedin"></i>
             <i class="email fa-solid fa-envelope"></i>
@@ -45,6 +49,10 @@
                     02 &lt;p&gt; I build and develop &lt;/p&gt;<br>
                     03 &lt;span&gt; <span class="blue-color">web systems</span>. &lt;/span&gt;
                 </div>
+                <div class="see-more">
+                    See More
+                    <i class="icon fa-solid fa-arrow-down-long"></i>
+                </div>
             </div> 
             <div class="portfolio">
                 <p>teste</p>
@@ -52,4 +60,27 @@
         </main>
     </div>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuLinks = document.querySelectorAll(".menu .sidebar-font");
+
+        menuLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                const clickedItem = event.currentTarget;
+
+                const icon = clickedItem.querySelector(".icon");
+                const text = clickedItem.querySelector("span");
+
+                menuLinks.forEach((otherLinks) =>{
+                    otherLinks.querySelector(".icon").classList.remove("active-icon");
+                    otherLinks.querySelector("span").classList.remove("active-text");
+                });
+
+                icon.classList.add("active-icon");
+                text.classList.add("active-text");
+                
+            });
+        });
+    });
+</script>
 </html>
