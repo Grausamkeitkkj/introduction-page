@@ -16,19 +16,19 @@
         <img class="photo" src="image.png">
         <ul class="menu">
             <li>
-                <a class="sidebar-font">
+                <a class="font">
                     <i class="active-icon icon fa-solid fa-house"></i>
                     <span class="active-text">Home</span>
                 </a>
             </li>
             <li>
-                <a class="sidebar-font">
+                <a class="font">
                     <i class="icon fa-solid fa-code"></i>
                     <span>Portfolio</span>
                 </a>
             </li>
             <li>
-                <a class="sidebar-font">
+                <a class="font">
                     <i class="icon fa-solid fa-user"></i>
                     <span>About me </span>
                 </a>
@@ -48,18 +48,38 @@
             </a>
         </div>
     </div>
+    <div class="topbar">
+        <ul class="gray menu-topbar">
+            <li>
+                <a class="font">
+                    <i class="active-icon icon fa-solid fa-house"></i>
+                </a>
+            </li>
+            <li>
+                <a class="font">
+                    <i class="icon fa-solid fa-code"></i>
+                </a>
+            </li>
+            <li>
+                <a class="font">
+                    <i class="icon fa-solid fa-user"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
         <main class="main-content">
+            <img class="photo-small" src="image.png">
             <div class="code-text-container">
                 <div class="code-text">
                     <span class="first-line">01 &lt;div&gt; Hello, I'm <span class="blue-color">Diogo</span>! &lt;/div&gt;</span><br>
                     <span class="second-line">02 &lt;p&gt; I build and develop &lt;/p&gt;</span><br>
                     <span class="third-line">03 &lt;span&gt; <span class="blue-color">web systems</span> &lt;/span&gt;</span>
                 </div>
-                <div class="see-more">
-                    See More
-                    <i class="icon fa-solid fa-arrow-down-long"></i>
-                </div>
             </div> 
+            <div class="see-more">
+                See More
+                <i class="icon fa-solid fa-arrow-down-long"></i>
+            </div>
             <div class="portfolio">
                 <p>teste</p>
             </div>
@@ -68,7 +88,7 @@
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const menuLinks = document.querySelectorAll(".menu .sidebar-font");
+        const menuLinks = document.querySelectorAll(".menu .font");
 
         menuLinks.forEach((link) => {
             link.addEventListener("click", (event) => {
