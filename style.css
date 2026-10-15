@@ -76,16 +76,25 @@ body{
 }
 
 .links {
-    align-items: center;
-    display: flex;
-    gap:15px;
-    text-decoration: none;
-    color: inherit;
     margin-top: auto;
-    margin-bottom: 10vh;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
 }
 
-.links:visited {
+.links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin, .email {
+    text-decoration: none;
+    color: inherit;
+}
+
+.linkedin:visited, .email:visited {
     color: inherit;
 }
 
@@ -93,17 +102,14 @@ body{
     font-size: 50px;
 }
 
-.linkedin:hover{
-    color: #257ae8;
-}
-
 .email{
     font-size: 57px;
 }
 
-.email:hover{
+.linkedin:hover, .email:hover{
     color: #257ae8;
 }
+
 
 main {
     grid-column: 2;
