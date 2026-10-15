@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animationTyping.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -16,8 +17,8 @@
         <ul class="menu">
             <li>
                 <a class="sidebar-font">
-                    <i class="icon fa-solid fa-house"></i>
-                    <span>Home</span>
+                    <i class="active-icon icon fa-solid fa-house"></i>
+                    <span class="active-text">Home</span>
                 </a>
             </li>
             <li>
@@ -34,7 +35,7 @@
             </li>
         </ul>
         <div class="languages">
-            <a class="active-language language-en" href="en.html">EN</a>/<a href="pt.html">PT</a>
+            <a class="active-language language" href="en.html">EN</a>/<a class="language" href="pt.html">PT</a>
         </div>
 
         <a class="links" href="https://www.linkedin.com/in/diogo-schultz/" target="_blank" rel="noopener noreferrer">
@@ -45,9 +46,9 @@
         <main class="main-content">
             <div class="code-text-container">
                 <div class="code-text">
-                    01 &lt;div&gt; Hello, I'm <span class="blue-color">Diogo</span>! &lt;/div&gt;<br>
-                    02 &lt;p&gt; I build and develop &lt;/p&gt;<br>
-                    03 &lt;span&gt; <span class="blue-color">web systems</span>. &lt;/span&gt;
+                    <span class="first-line">01 &lt;div&gt; Hello, I'm <span class="blue-color">Diogo</span>! &lt;/div&gt;</span><br>
+                    <span class="second-line">02 &lt;p&gt; I build and develop &lt;/p&gt;</span><br>
+                    <span class="third-line">03 &lt;span&gt; <span class="blue-color">web systems</span> &lt;/span&gt;</span>
                 </div>
                 <div class="see-more">
                     See More
@@ -83,4 +84,5 @@
         });
     });
 </script>
+<script src="cursorAnimation.js"></script>
 </html>

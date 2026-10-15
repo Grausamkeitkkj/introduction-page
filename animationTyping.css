@@ -1,0 +1,51 @@
+.first-line, .second-line, .third-line {
+    border-right: solid 2px transparent;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 2s steps(40, end) forwards;
+}
+
+.first-line {
+    animation-delay: 0ms;
+}
+
+.second-line {
+    animation-delay: 2s;  
+}
+
+.third-line {
+    animation-delay: 4s;
+}
+
+.third-line-cursor-animation{
+    width: var(--char);
+    animation: cursorBlink 0.75s step-end infinite;
+}
+
+.first-line  { --char: 33ch; }
+.second-line { --char: 31ch; }
+.third-line  { --char: 29ch; }
+
+.transparent-border{
+    border-right-color: transparent;
+}
+
+@keyframes cursorBlink {
+    from, to {border-color: black; }
+    50% { border-color: transparent; }
+}
+
+@keyframes typing {
+    0%  { 
+        width: 0; 
+    }
+    100% { 
+        width: var(--char);
+    }
+}
+
+.show-cursor{
+    border-right-color: black
+}
