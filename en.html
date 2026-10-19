@@ -77,21 +77,24 @@
                         <span class="third-line">03 &lt;span&gt; <span class="blue-color">web systems</span> &lt;/span&gt;</span>
                     </div>
                 </div>
-                <div class="see-more">
+                <div id="see-more" class="see-more">
                     See More
                     <i class="icon fa-solid fa-arrow-down-long"></i>
                 </div>
             </section>
         
-            <div class="portfolio" id="portfolio">
+            <section class="portfolio" id="portfolio">
+                <h2>Portfólio</h2>
                 <p>teste</p>
-            </div>
+            </section>
         </main>
     </div>
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const menuLinks = document.querySelectorAll(".menu .font");
+        const scrollButton = document.getElementById('see-more');
+        const destiny = document.getElementById('portfolio');
 
         menuLinks.forEach((link) => {
             link.addEventListener("click", (event) => {
@@ -110,6 +113,13 @@
                 
             });
         });
+
+        scrollButton.addEventListener('click', function(){
+            destiny.scrollIntoView({ 
+                behavior: 'smooth', // Deixa a rolagem suave (com animação)
+                bblock: 'start'      // Alinha o topo do elemento com o topo da janela
+            });
+        })
     });
 </script>
 <script src="cursorAnimation.js"></script>
